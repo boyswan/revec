@@ -20,7 +20,7 @@ open Revec.Pervasives;
 let foo = (5, 6 ,7) |> list_of_tuple3;
 let bar = (2, 5, 9) |> list_of_tuple3;
 
-foo *^ bar
+foo *^ bar;
 
 /*log: [10, 30, 63] */
 ```
