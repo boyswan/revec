@@ -38,7 +38,7 @@ module Tuple = {
     | _ => (0, 0, 0, 0);
 };
 
-module Vector = {
+module Revec = {
   include Tuple;
   let add = make((+));
   let multiply = make(( * ));
