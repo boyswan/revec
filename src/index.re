@@ -13,8 +13,6 @@ let opVec = fn =>
   | ([a, b, c, d], [e]) => [fn(a, e), fn(b, e), fn(c, e), fn(d, e)]
   | _ => [];
 
-let make = (op, x, y) => opVec(op, (x, y));
-
 module Tuple = {
   let list_of_tuple1 = a => [a];
   let list_of_tuple2 = ((a, b)) => [a, b];
@@ -38,16 +36,26 @@ module Tuple = {
     | _ => (0, 0, 0, 0);
 };
 
+let make = (op, x, y) => opVec(op, (x, y));
+
 module Revec = {
   include Tuple;
   let add = make((+));
   let multiply = make(( * ));
   let divide = make((/));
   let subtract = make((-));
+  let addf = make((+.));
+  let multiplyf = make(( *. ));
+  let dividef = make((/.));
+  let subtractf = make((-.));
   module Pervasives = {
     let (+^) = add;
     let ( *^ ) = multiply;
     let (/^) = divide;
     let (-^) = subtract;
+    let (+.^) = addf;
+    let ( *.^ ) = multiplyf;
+    let (/.^) = dividef;
+    let (-.^) = subtractf;
   };
 };
