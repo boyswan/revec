@@ -1,6 +1,6 @@
 ## Revec
 
-Vector utilities to add, subtract, multiply and divide vectors. Helpers to convert between n-tuple and lists, and pervasives for operations `(+^) (-^) (*^) (/^)`.
+Vector utilities to add, subtract, multiply and divide vectors. Helpers to convert between n-tuple and lists, and infix operators `(+^) (-^) (*^) (/^)`.
 
 Example
 
